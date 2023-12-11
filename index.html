@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body><h1 class="project-title center-text">PLOT GENERATION USING GENERATIVE AI (GAN)</h1>
+    <h3 class="center-text">AL&ML MINI PROJECT 2023</h3>
+    <ul class="team-members">
+        <li class="team-members-li"><a href="https://github.com/AAzarudeen">Azarudeen A<br>(2022179017) </a></li>
+        <li class="team-members-li"><a href="https://github.com/NandhinideviMurugavel">Nandhini Devi M<br>(2022179018)</a></li>
+        <li class="team-members-li"><a href="https://github.com/SakthiSeyana">Sakthi P<br>(2022179055)</a></li>
+    </ul>
+    <h4 class="center-text">Anna University</h4>
+    <h4 class="center-text">College Of Engineering Guindy</h4>
+    <h2 class="topic-title">Abstract</h2>
+    <!-- <p>"This paper proposes a novel framework integrating the principles of active stereo in standard passive cameras, yet in the absence of a physical pattern projector. Our methodology virtually projects a pattern over left and right images, according to sparse measurements obtained from a depth sensor. Any of such devices can be seamlessly plugged into our framework, allowing for the deployment of a virtual active stereo setup in any possible environments overcoming the limitation of physical patterns, such as limited working range. Exhaustive experiments on indoor/outdoor datasets, featuring both long and close-range, support the seamless effectiveness of our approach, boosting the accuracy of both stereo algorithms and deep networks."</p> -->
+    <p class="abstract">
+        &emsp;&emsp;This mini project proposes a novel idea using the GENERATIVE AI (GAN) in architectrue. 
+        The goal of this mini project is to generate a architectral design for a given plot area. 
+        In this project there are two GANs involved one is the GAN which will help us to clean the images i.e. 
+        the raw datas which were collected for the training of the plot generation GAN.
+    </p>
+    <h2 class="subtopic-title">Method</h2>
+    <h2>1-Problems</h2>
+    <p>1.Given a pair of stereo images, stereo algorithms try to resolve the so called "correspondence problem". This problem is not always easy: uniform areas such as the wall shown in the figure make the problem ambiguous. Furthermore, given learning nature of stereo networks, they suffer when dealing with unseen scenarios. This latter problem is also called domain shift. </p>
+    <br>
+    <img src=" ./html41.jpg" alt="logo1" width="300px" height="300px">
+    <p>Performance on uniform areas. Even recent stereo network struggles with uniform areas.</p>
+    <br>
+    <p>2.Active stereo deal with ambiguous regions using a physical pattern projector which aims to ease correspondences. However, a pattern projector is not feasible in outdoor scenarios where ambient light cancel out the projected pattern. Furthermore, active light decreases proportionally to the square of the distance: consequentially active stereo cannot deal with long distances.</p>
+    <br>
+    <p>Performance of active pattern. Even in a indoor scenario, active light decreases proportionally to the square of the distance. As soon as we move in an external environment, the projected light is dimmed by the external light.</ p>
+    <br>
+    <div>
+    <img src="html48.jpg" alt="logo2" width="200px" height="200px" title="duplicate">
+    <img src="html48.jpg" alt="logo2" width="200px" height="200px" >
+    </div>
+    <h2 class="subtopic-title">2-proposal</h2>
+    <p>1.Inspired by active stereo, our technique, dubbed as VPP, virtually project a pattern into stereo image pair according to sparse depth measurements. We assume a calibrated setup composed by stereo camera and a depth sensor appropriate for the final environment</p>
+    <br>
+    <p>Potential of our proposal. Previous shown network, even trained on synthetic data, dramatically improves its accuracy when coupled with our framework, even with few sparse points.</p>
+    <br>
+    <p>Appropriate depth sensor choice. LiDAR sensor is well suited for outdoor environments.</p>
+    <br>
+    <p>2.Our proposal outperforms state-of-the-art fusion methods even with few depth points such as 1% of the whole image. Finally, as shown in the figure, virtual pattern reduce domain shift issue without requiring an additional training procedure.</p>
+    <br>
+    <p>Appropriate depth sensor choice. Previous shown network trained on synthetic data struggles (A) when dealing on new environment. Fine tuning the network in final scenario (B) improves accuracy but require annotated data. Using our framework in combination with CFNet shows an ability to tackle domain shift issues (C), even with low amount (5%) of sparse points. Last figure (D) shows ground-truth disparity map.</p>
+    <br>
+    <h2 class="subtopic-title">3-virtual pattern  projection</h2>
+    <p>Framework overview. Given a vanilla stereo pair of images from a stereo camera and sparse depth points from a depth sensor, our framework virtually projects depth seeds to stereo pair according to system geometry and a pattering strategy.</p>
+    <br>
+    <p>As for all fusion methods, our proposal relies on sparse depth seeds but, differentially from them, we inject sparse points directly into images using a virtual pattern. For each known point, we convert depth into disparity then we apply a virtual pattern in each stereo image accordingly to a pattering strategy.</p>
+    <br>
+    <p>IL(x,y)←A(x,x′,y)
+        IR(x′,y)←A(x,x′,y)</p>
+    <br>
+    <p>Our method do not require any change or assumption in the stereo matcher: we assume it to be a black-box model that requires in input a pair of rectified stereo images and produce a disparity map.</p>
+    <br>
+    <p>Augmented stereo pair is less affected by ambiguous regions and makes stereo matcher work easier. Given that our framework alters only stereo pair, any stereo matcher could benefit from it. Since disparity seed could have subpixel accuracy, we use weighted splatting to avoid loss of information.</p>
+    <br>
+    <p>IR(⌊x′⌋,y)←βIR(⌊x′⌋,y)+(1−β)A(x,x′,y)
+ 
+        IR(⌈x′⌉,y)←(1−β)IR(⌈x′⌉,y)+βA(x,x′,y)
+        β=x′−⌊x′⌋</p>
+</body>
+</html>
