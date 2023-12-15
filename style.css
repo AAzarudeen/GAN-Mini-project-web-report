@@ -28,20 +28,33 @@ a{
 .center-text{
     text-align: center;
 }
-div{
+.img-grid{
     display:flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
+    margin-bottom: 50px;
 }
-div img{
-    width: 400px;
-    height: 300px;
-    border-radius: 2px ;
-    box-shadow: 4px 7px 7px 0px;
+.grid-item{
     cursor: pointer;
-    margin: 10px;
-    transition: 400ms;
-    filter: grayscale(1);
-    transform: scale(1.03 );
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.img-grid-item{
+    width: 200px;
+    height: 200px; 
+    box-shadow: 3px 5px 10px 0px;
+    margin: 20px;
+    border-radius: 15px;
+    padding: 10px;
+    background-color: white;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
