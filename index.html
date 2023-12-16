@@ -58,9 +58,42 @@
       work for them and also most of the time based on the customer's
       constrainds it take lot of work and time. To reduce the plot designing
       time we are going to bulid a GAN AI model which can generate the Plots
-      based on the user's or customer's prompt.
+      based on the user's or customer's prompt. The role given for us is to clean 
+      as many as images possible to train the GAN.
     </p>
-    <h2 class="subtopic-title">2-GAN Description</h2>
+    <h2 class="subtopic-title">2-Data Collection</h2>
+    <p class="content">
+      &emsp;&emsp;In the initial stage we were given a data consisting images around 6000
+      which were download in bulk using webscraping method. Those 6000 images are splited among 
+      the 6 teams for our team we got around 1000 images and in those images many images were 
+      irrelavent and most of images were so blury and uneditable. The number of images which were
+      good to edit (or) clean were around 400.
+    </p>
+    <h3>The images which are not able to use</h3>
+
+    <div class="img-grid">
+      <div class="grid-item">
+        <img class="img-grid-item" src="./assets/bad_images/7117.jpg" />Figure 1
+      </div>
+      <div class="grid-item">
+        <img class="img-grid-item" src="./assets/bad_images/7490.jpg" />Figure 2
+      </div>
+      </div>
+      <h3>The images which are able to use</h3>
+
+      <div class="img-grid">
+        <div class="grid-item">
+          <img class="img-grid-item" src="./assets/good_images/41.jpg" />Figure 1
+        </div>
+        <div class="grid-item">
+          <img class="img-grid-item" src="./assets/good_images/42.jpg" />Figure 2
+        </div>
+        </div>
+    <h2 class="subtopic-title">3-Data Cleaning</h2>
+    <p class="content">
+      &emsp;&emsp;
+    </p>
+    <h2 class="subtopic-title">-GAN Description</h2>
     <h4 class="subtopic-title">1. Cleaning GAN</h4>
     <p class="content">
       &emsp;&emsp;This project consisits of two GANs one is for cleaning the
@@ -93,8 +126,12 @@
       like the figures below:
     </p>
     <div class="flex-row">
-      <img class="img-grid-item" src="./assets/img/10_layout.jpg" />
-      <img class="img-grid-item" src="./assets/img/10_outline.jpg" />
+      <div class="grid-item">
+        <img class="img-grid-item" src="./assets/img/10_layout.jpg" />Figure 1
+      </div>
+      <div class="grid-item">
+        <img class="img-grid-item" src="./assets/img/10_outline.jpg" />Figure 2
+      </div>
     </div>
   </body>
 </html>
