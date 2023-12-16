@@ -7,69 +7,91 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1 class="project-title center-text">
-      PLOT GENERATION USING GENERATIVE AI (GAN)
-    </h1>
-    <h3 class="center-text">AL&ML MINI PROJECT 2023</h3>
-    <ul class="team-members">
-      <li class="team-members-li">
-        <a href="https://github.com/AAzarudeen"
-          >Azarudeen A<br />(2022179017)
-        </a>
-      </li>
-      <li class="team-members-li">
-        <a href="https://github.com/NandhinideviMurugavel"
-          >Nandhini Devi M<br />(2022179018)</a
-        >
-      </li>
-      <li class="team-members-li">
-        <a href="https://github.com/SakthiSeyana">Sakthi P<br />(2022179055)</a>
-      </li>
-    </ul>
-    <h4 class="center-text">Anna University</h4>
-    <h4 class="center-text">College Of Engineering Guindy</h4>
-    <center><h2 class="topic-title">Abstract</h2></center>
-    <p class="abstract">
+    <section id="front-page">
+      <h1 class="project-title center-text">
+        PLOT GENERATION USING GENERATIVE AI (GAN)
+      </h1>
+      <h4 class="topic-title center-text">AL&ML MINI PROJECT 2023</h4>
+      <h4 class="topic-title center-text">Staff in charge : Dr.M.Deivamani</h4>
+      <h3 class="topic-title center-text">
+        Department of Information Science and Technology
+      </h3>
+      <h4 class="topic-title center-text">College Of Engineering Guindy</h4>
+      <h4 class="topic-title center-text">Anna University</h4>
+      <h4 class="topic-title center-text">Team Four</h4>
+      <ul class="team-members">
+        <li class="team-members-li">
+          <a href="https://github.com/AAzarudeen"
+            >Azarudeen A<br />(2022179017)
+          </a>
+        </li>
+        <li class="team-members-li">
+          <a href="https://github.com/NandhinideviMurugavel"
+            >Nandhini Devi M<br />(2022179018)</a
+          >
+        </li>
+        <li class="team-members-li">
+          <a href="https://github.com/SakthiSeyana"
+            >Sakthi P<br />(2022179055)</a
+          >
+        </li>
+      </ul>
+    </section>
+    <h2 class="topic-title">Abstract</h2>
+    <p class="content">
       &emsp;&emsp;This mini project proposes a novel idea using the GENERATIVE
       AI (GAN) in architectrue. The goal of this mini project is to generate a
       architectral design for a given plot area. In this project there are two
       GANs involved one is the GAN which will help us to clean the images i.e.
       the raw datas which were collected for the training of the plot generation
-      GAN.
+      GAN. The role of our team in this mini project was to clean the data i.e.
+      the images of various plot designed by various architects to train the
+      cleaning GAN. Raw images are collected using webscraping method those images 
+      are based on the North American and Europe region. Those images 
+      are to be cleaned the way to train the GAN model. As a part of this mini-project
+      a Auto Encoder code was given with some intentional bugs for learning purpose.
     </p>
-    <h2 class="subtopic-title">Method</h2>
-    <h2>1-Problem Statement</h2>
-    <p>
-      In these days architectrues for the houses in the North American and
-      Europe not are basically based on Vasthu
+    <h2 class="topic-title">Method</h2>
+    <h2 class="subtopic-title">1-Problem Statement</h2>
+    <p class="content">
+      &emsp;&emsp;Plot designed by the architects are always a time consuming
+      work for them and also most of the time based on the customer's
+      constrainds it take lot of work and time. To reduce the plot designing
+      time we are going to bulid a GAN AI model which can generate the Plots
+      based on the user's or customer's prompt.
     </p>
-    <h2>2-GAN Description</h2>
-    <h4>1. Cleaning GAN</h4>
-    This project consisits of two GANs one is for cleaning the architectrue
-    images to train the GAN which will produce the images i.e. the architectrue.
+    <h2 class="subtopic-title">2-GAN Description</h2>
+    <h4 class="subtopic-title">1. Cleaning GAN</h4>
+    <p class="content">
+      &emsp;&emsp;This project consisits of two GANs one is for cleaning the
+      architectrue images to train the GAN which will produce the images i.e.
+      the architectrue.
+    </p>
     <div class="img-grid">
+      <div class="grid-item">
+        <img class="img-grid-item" src="./assets/img/10_original.jpg" />Figure 1
+      </div>
       <div class="grid-item">
         <img class="img-grid-item" src="./assets/img/10_layout.jpg" />Figure 2
       </div>
       <div class="grid-item">
         <img class="img-grid-item" src="./assets/img/10_outline.jpg" />Figure 3
       </div>
-      <div class="grid-item">
-        <img class="img-grid-item" src="./assets/img/10_original.jpg" />Figure 1
-      </div>
     </div>
-    <h5>Images description :</h5>
-    <ul>
+    <h3>Images description :</h3>
+    <ul class="content">
       <li>The first image is the input for this cleaning GAN.</li>
       <li>
         The second figure is the layout generated for the original plot image.
       </li>
       <li>The third image is the outline image for the original plot image.</li>
     </ul>
-    <h4>2. Plot generation GAN</h4>
-    The second GAN is for generating the plot for the given area. Input will be
-    like 500 sq.ft and the output will be the images generated like the figures
-    below:
+    <h4 class="subtopic-title">2. Plot generation GAN</h4>
+    <p class="content">
+      &emsp;&emsp;The second GAN is for generating the plot for the given area.
+      Input will be like 500 sq.ft and the output will be the images generated
+      like the figures below:
+    </p>
     <div class="flex-row">
       <img class="img-grid-item" src="./assets/img/10_layout.jpg" />
       <img class="img-grid-item" src="./assets/img/10_outline.jpg" />
