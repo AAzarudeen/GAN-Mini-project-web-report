@@ -1,14 +1,15 @@
 body{
     margin:20px 15% 20px 15%;
-    background-color: rgb(190, 190, 190);
+    background-color: whitesmoke;
     color: rgb(0, 0, 0);
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 1px;
     line-height: 35px;
+    color: black;
 }
 
 .project-title{
-    font-size: 40px;    
+    font-size: 40px;  
 }
 
 .team-members{
@@ -19,6 +20,10 @@ body{
 .topic-title{
     text-align: center;
     font-size: 25px;
+    color: black;
+}
+.subtopic-title{
+    color: black;
 }
 .team-members-li{
     list-style: none;
@@ -48,22 +53,42 @@ a{
     margin-bottom: 50px;
 }
 .grid-item{
+    width: 350px;
+    height: 350px;
     cursor: pointer;
     text-align: center;
     display: flex;
     flex-direction: column;
     background-size: cover;
+    margin: 20px;
 }
 
 .img-grid-item{
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
+    object-fit: scale-down;
     box-shadow: 3px 5px 10px 0px;
-    margin: 20px;
     border-radius: 15px;
-    padding: 10px;
     background-color: white;
-     
+    padding: 5px;
+    transition: scale 1s ease-in-out;
+    margin-bottom: 10px;
+}
+
+.img-grid-item:hover{
+    scale: 1.1;
+}
+
+.code-snippets{
+    width: 85%;
+    height: 350px;
+    overflow-y: scroll;
+    background-color: rgb(69, 91, 111);
+    padding: 20px;
+    line-height: 20px;
+    border-radius: 15px;
+    color: azure;
+    margin: auto;
 }
 
 .flex-row{

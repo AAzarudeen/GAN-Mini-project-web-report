@@ -1,137 +1,290 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <section id="front-page">
-      <h1 class="project-title center-text">
-        PLOT GENERATION USING GENERATIVE AI (GAN)
-      </h1>
-      <h4 class="topic-title center-text">AL&ML MINI PROJECT 2023</h4>
-      <h4 class="topic-title center-text">Staff in charge : Dr.M.Deivamani</h4>
-      <h3 class="topic-title center-text">
-        Department of Information Science and Technology
-      </h3>
-      <h4 class="topic-title center-text">College Of Engineering Guindy</h4>
-      <h4 class="topic-title center-text">Anna University</h4>
-      <h4 class="topic-title center-text">Team Four</h4>
-      <ul class="team-members">
-        <li class="team-members-li">
-          <a href="https://github.com/AAzarudeen"
-            >Azarudeen A<br />(2022179017)
-          </a>
-        </li>
-        <li class="team-members-li">
-          <a href="https://github.com/NandhinideviMurugavel"
-            >Nandhini Devi M<br />(2022179018)</a
-          >
-        </li>
-        <li class="team-members-li">
-          <a href="https://github.com/SakthiSeyana"
-            >Sakthi P<br />(2022179055)</a
-          >
-        </li>
-      </ul>
-    </section>
-    <h2 class="topic-title">Abstract</h2>
-    <p class="content">
-      &emsp;&emsp;This mini project proposes a novel idea using the GENERATIVE
-      AI (GAN) in architectrue. The goal of this mini project is to generate a
-      architectral design for a given plot area. In this project there are two
-      GANs involved one is the GAN which will help us to clean the images i.e.
-      the raw datas which were collected for the training of the plot generation
-      GAN. The role of our team in this mini project was to clean the data i.e.
-      the images of various plot designed by various architects to train the
-      cleaning GAN. Raw images are collected using webscraping method those images 
-      are based on the North American and Europe region. Those images 
-      are to be cleaned the way to train the GAN model. As a part of this mini-project
-      a Auto Encoder code was given with some intentional bugs for learning purpose.
-    </p>
-    <h2 class="topic-title">Method</h2>
-    <h2 class="subtopic-title">1-Problem Statement</h2>
-    <p class="content">
-      &emsp;&emsp;Plot designed by the architects are always a time consuming
-      work for them and also most of the time based on the customer's
-      constrainds it take lot of work and time. To reduce the plot designing
-      time we are going to bulid a GAN AI model which can generate the Plots
-      based on the user's or customer's prompt. The role given for us is to clean 
-      as many as images possible to train the GAN.
-    </p>
-    <h2 class="subtopic-title">2-Data Collection</h2>
-    <p class="content">
-      &emsp;&emsp;In the initial stage we were given a data consisting images around 6000
-      which were download in bulk using webscraping method. Those 6000 images are splited among 
-      the 6 teams for our team we got around 1000 images and in those images many images were 
-      irrelavent and most of images were so blury and uneditable. The number of images which were
-      good to edit (or) clean were around 400.
-    </p>
-    <h3>The images which are not able to use</h3>
 
-    <div class="img-grid">
-      <div class="grid-item">
-        <img class="img-grid-item" src="./assets/bad_images/7117.jpg" />Figure 1
-      </div>
-      <div class="grid-item">
-        <img class="img-grid-item" src="./assets/bad_images/7490.jpg" />Figure 2
-      </div>
-      </div>
-      <h3>The images which are able to use</h3>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-      <div class="img-grid">
-        <div class="grid-item">
-          <img class="img-grid-item" src="./assets/good_images/41.jpg" />Figure 1
-        </div>
-        <div class="grid-item">
-          <img class="img-grid-item" src="./assets/good_images/42.jpg" />Figure 2
-        </div>
-        </div>
-    <h2 class="subtopic-title">3-Data Cleaning</h2>
-    <p class="content">
-      &emsp;&emsp;
-    </p>
-    <h2 class="subtopic-title">-GAN Description</h2>
-    <h4 class="subtopic-title">1. Cleaning GAN</h4>
-    <p class="content">
-      &emsp;&emsp;This project consisits of two GANs one is for cleaning the
-      architectrue images to train the GAN which will produce the images i.e.
-      the architectrue.
-    </p>
-    <div class="img-grid">
-      <div class="grid-item">
-        <img class="img-grid-item" src="./assets/img/10_original.jpg" />Figure 1
-      </div>
-      <div class="grid-item">
-        <img class="img-grid-item" src="./assets/img/10_layout.jpg" />Figure 2
-      </div>
-      <div class="grid-item">
-        <img class="img-grid-item" src="./assets/img/10_outline.jpg" />Figure 3
-      </div>
-    </div>
-    <h3>Images description :</h3>
-    <ul class="content">
-      <li>The first image is the input for this cleaning GAN.</li>
-      <li>
-        The second figure is the layout generated for the original plot image.
+<body>
+  <section id="front-page">
+    <h1 class="project-title center-text">
+      PLOT GENERATION USING GENERATIVE AI (GAN)
+    </h1>
+    <h4 class="topic-title center-text">AI&ML MINI PROJECT 2023</h4>
+    <h4 class="topic-title center-text">Staff in charge : Dr.M.Deivamani</h4>
+    <h3 class="topic-title center-text">
+      Department of Information Science and Technology
+    </h3>
+    <h4 class="topic-title center-text">College Of Engineering Guindy</h4>
+    <h4 class="topic-title center-text">Anna University</h4>
+    <h4 class="topic-title center-text">Team Four</h4>
+    <ul class="team-members">
+      <li class="team-members-li">
+        <a href="https://github.com/AAzarudeen">Azarudeen A<br />(2022179017)
+        </a>
       </li>
-      <li>The third image is the outline image for the original plot image.</li>
+      <li class="team-members-li">
+        <a href="https://github.com/NandhinideviMurugavel">Nandhini Devi M<br />(2022179018)</a>
+      </li>
+      <li class="team-members-li">
+        <a href="https://github.com/SakthiSeyana">Sakthi P<br />(2022179055)</a>
+      </li>
     </ul>
-    <h4 class="subtopic-title">2. Plot generation GAN</h4>
-    <p class="content">
-      &emsp;&emsp;The second GAN is for generating the plot for the given area.
-      Input will be like 500 sq.ft and the output will be the images generated
-      like the figures below:
-    </p>
-    <div class="flex-row">
-      <div class="grid-item">
-        <img class="img-grid-item" src="./assets/img/10_layout.jpg" />Figure 1
-      </div>
-      <div class="grid-item">
-        <img class="img-grid-item" src="./assets/img/10_outline.jpg" />Figure 2
-      </div>
+  </section>
+  <h2 class="topic-title">Abstract</h2>
+  <p class="content">
+    &emsp;&emsp;This mini project proposes a novel idea using the GENERATIVE
+    AI (GAN) in architectrue. The goal of this mini project is to generate a
+    architectral design for a given plot area. In this project there are two
+    GANs involved one is the GAN which will help us to clean the images i.e.
+    the raw datas which were collected for the training of the plot generation
+    GAN. The role of our team in this mini project was to clean the data i.e.
+    the images of various plot designed by various architects to train the
+    cleaning GAN. Raw images are collected using webscraping method those images
+    are based on the North American and Europe region. Those images
+    are to be cleaned the way to train the GAN model. As a part of this mini-project
+    a Auto Encoder code was given with some intentional bugs for learning purpose.
+  </p>
+  <h2 class="topic-title">Method</h2>
+  <h2 class="subtopic-title">1-Problem Statement</h2>
+  <p class="content">
+    &emsp;&emsp;Plot designed by the architects are always a time consuming
+    work for them and also most of the time based on the customer's
+    constrainds it take lot of work and time. To reduce the plot designing
+    time we are going to bulid a GAN AI model which can generate the Plots
+    based on the user's or customer's prompt. The role given for us is to clean
+    as many as images possible to train the GAN.
+  </p>
+  <h2 class="subtopic-title">2-Data Collection</h2>
+  <p class="content">
+    &emsp;&emsp;In the initial stage we were given a data consisting images around 6000
+    which were download in bulk using webscraping method. Those 6000 images are splited among
+    the 6 teams for our team we got around 1000 images and in those images many images were
+    irrelavent and most of images were so blury and uneditable. The number of images which were
+    good to edit (or) clean were around 400. Other than that we got a synthatic dataset of images
+    about 70. The synthatic images were called Robin dataset.
+  </p>
+  <h3>The images from Robin dataset</h3>
+  <div class="img-grid">
+    <div class="grid-item">
+      <img class="img-grid-item" src="./assets/robin/Cat12_1.jpg" />Figure 1
     </div>
-  </body>
+    <div class="grid-item">
+      <img class="img-grid-item" src="./assets/robin/Cat43_4.jpg" />Figure 2
+    </div>
+  </div>
+  <h3>The images which are not able to use</h3>
+
+  <div class="img-grid">
+    <div class="grid-item">
+      <img class="img-grid-item" src="./assets/bad_images/7117.jpg" />Figure 1
+    </div>
+    <div class="grid-item">
+      <img class="img-grid-item" src="./assets/bad_images/7490.jpg" />Figure 2
+    </div>
+  </div>
+  <h3>The images which are able to use</h3>
+
+  <div class="img-grid">
+    <div class="grid-item">
+      <img class="img-grid-item" src="./assets/good_images/41.jpg" />Figure 1
+    </div>
+    <div class="grid-item">
+      <img class="img-grid-item" src="./assets/good_images/42.jpg" />Figure 2
+    </div>
+  </div>
+  <h2 class="subtopic-title">3-Data Cleaning</h2>
+  <p class="content">
+    &emsp;&emsp;From the collected 6000 images 1000 images where splited with in the teams.
+    For our team we got 1000 images and from the 1000 images some images were courpted and some images
+    are irrelavent to the domin since it was a bulk download and webscraping. And there were many duplication
+    within our Team.
+    <br>
+    We user a open source software called <a href="https://github.com/ermig1979/AntiDupl">AntiDupl</a>. This problem
+    was with all the teams. So make the proess quick a python script was written to remove the duplicates.
+  </p>
+  <h4 class="subtopic-title">Image cleaning Process</h4>
+  <h4 class="subtopic-title">3.1 Tools used</h4>
+  <ol>
+    <li><a href="https://www.photopea.com/">Photopea</a></li>
+    <li>Python(For removing duplicates)</li>
+    <li><a href="https://github.com/ermig1979/AntiDupl">AntiDupl</a> (For removing duplicates)</li>
+  </ol>
+  <h4 class="subtopic-title">3.2 Removing duplicates</h4>
+  <p class="content">
+    &emsp;&emsp;First we used a python script to remove the images which are duplicates from all the groups.
+    we manually deleted the imaegs are courpted and which were irrelavent.
+  </p>
+  <div class="code-snippets">
+    <pre>
+import os
+from PIL import Image
+import imagehash
+import shutil
+import time
+
+# Define the source folder containing your images
+source_folder = "D:/Estate_plot project/Estate_plot_groups/groups/Total_original"
+
+# Define the destination folder for storing duplicate images
+duplicate_folder = "D:/Estate_plot project/Estate_plot_groups/groups/Total_original_filtered"
+
+# Create the duplicate folder if it doesn't exist
+os.makedirs(duplicate_folder, exist_ok=True)
+
+# Set the similarity threshold (50% threshold)
+similarity_threshold = 0.5
+
+# Create a dictionary to store hash values and their corresponding file paths
+image_hashes = {}
+
+# Create a dictionary to track the count of duplicates for each original image
+duplicate_counts = {}
+
+# Loop through the source folder
+for filename in os.listdir(source_folder):
+    if filename.endswith((".jpg", ".png")):
+        img_path = os.path.join(source_folder, filename)
+        img = Image.open(img_path)
+        img_hash = imagehash.average_hash(img)
+
+        is_duplicate = False
+        for existing_hash, existing_filename in image_hashes.items():
+            similarity = 1 - (img_hash - existing_hash) / len(img_hash.hash)
+
+            if similarity > similarity_threshold:
+                # Duplicate found
+                is_duplicate = True
+
+                if existing_filename not in duplicate_counts:
+                    duplicate_counts[existing_filename] = 1
+                else:
+                    duplicate_counts[existing_filename] += 1
+
+                # Rename the duplicate as i_original_imagename
+                duplicate_name = f"{duplicate_counts[existing_filename]}_{existing_filename}"
+                duplicate_path = os.path.join(duplicate_folder, duplicate_name)
+                shutil.copy(img_path, duplicate_path)
+                print(f"Duplicate found: {filename} (Similar to {existing_filename}), "
+                      f"saved as {duplicate_name}")
+
+                # Attempt to remove the duplicate from the source folder
+                for _ in range(3):  # Try up to 3 times
+                    try:
+                        os.remove(img_path)
+                        break  # Exit the loop if removal is successful
+                    except PermissionError:
+                        print(f"Failed to remove {filename}. It's being used by another process. Retrying...")
+                        time.sleep(1)  # Wait for a second before retrying
+
+                break
+
+        if not is_duplicate:
+            image_hashes[img_hash] = filename
+print("Duplicate images have been moved to the 'Total_original_filtered' folder.")
+
+    </pre>
+  </div>
+  <h3>The irrelavent images : </h3>
+  <div class="img-grid">
+    <div class="grid-item">
+      <img class="img-grid-item" src="./assets/irrelavent_images/1.jpg" />Figure 1
+    </div>
+    <div class="grid-item">
+      <img class="img-grid-item" src="./assets/irrelavent_images/26.jpg" />Figure 2
+    </div>
+    <div class="grid-item">
+      <img class="img-grid-item" src="./assets/irrelavent_images/28.jpg" />Figure 2
+    </div>
+  </div>
+
+  <h4 class="subtopic-title">3.3 cleaning the raw images</h4>
+  <p class="content">
+    &emsp;&emsp;We used a photo edting tool named Photopea which is a free alternative for photoshop.
+    instead earseing the unwanted text from the images we added lines to over the images layer by layer.
+    From one raw image we need to output one is Layout image and another one is outline image.
+  </p>
+
+  <h2 class="subtopic-title">Raw image</h2>
+  <div class="img-grid">
+    <div class="grid-item">
+      <img class="img-grid-item" src="./assets/img/10_original.jpg" />
+    </div>
+  </div>
+
+  <h2 class="subtopic-title">Layout image</h2>
+  <div class="img-grid">
+    <div class="grid-item">
+      <img class="img-grid-item" src="./assets/img/10_layout.jpg" />
+    </div>
+  </div>
+  <h2 class="subtopic-title">Outline image</h2>
+  <div class="img-grid">
+    <div class="grid-item">
+      <img class="img-grid-item" src="./assets/img/10_outline.jpg" />
+    </div>
+  </div>
+  <p class="content">
+    Rules to be followed while cleaning a image
+    <ul>
+      <li>Removing text from the image</li>
+      <li>Making the background as white</li>
+      <li>All walls should be black</li>
+      <li>Outer walls of the buliding should be 8px rectangle with fill</li>
+      <li>Inner walls of the buliding should be 4px rectangle with fill</li>
+      <li>Doors and windows of the buliding should be 1px rectangle with fill</li>
+      <li>Balcony of the buliding should be 8px rectangle without fill</li>
+      <li>Sliding door of the buliding should be 4px rectangle without fill 1px line in the middle</li>
+    </ul>
+  </p>
+  <h2 class="subtopic-title">4-GAN Description</h2>
+  <h4 class="subtopic-title">1. Cleaning GAN</h4>
+  <p class="content">
+    &emsp;&emsp;This project consisits of two GANs one is for cleaning the
+    architectrue images to train the GAN which will produce the images i.e.
+    the architectrue.
+  </p>
+  <div class="img-grid">
+    <div class="grid-item">
+      <img class="img-grid-item" src="./assets/img/10_original.jpg" />Figure 1
+    </div>
+    <div class="grid-item">
+      <img class="img-grid-item" src="./assets/img/10_layout.jpg" />Figure 2
+    </div>
+    <div class="grid-item">
+      <img class="img-grid-item" src="./assets/img/10_outline.jpg" />Figure 3
+    </div>
+  </div>
+  <h3>Images description :</h3>
+  <ul class="content">
+    <li>The first image is the input for this cleaning GAN.</li>
+    <li>
+      The second figure is the layout generated for the original plot image.
+    </li>
+    <li>The third image is the outline image for the original plot image.</li>
+  </ul>
+  <h4 class="subtopic-title">2. Plot generation GAN</h4>
+  <p class="content">
+    &emsp;&emsp;The second GAN is for generating the plot for the given area.
+    Input will be like 500 sq.ft and the output will be the images generated
+    like the figures below:
+  </p>
+  <div class="flex-row">
+    <div class="grid-item">
+      <img class="img-grid-item" src="./assets/img/10_layout.jpg" />Figure 1
+    </div>
+    <div class="grid-item">
+      <img class="img-grid-item" src="./assets/img/10_outline.jpg" />Figure 2
+    </div>
+  </div>
+  <h2 class="subtopic-title">5-Conclusion</h2>
+  <p class="content">
+    &emsp;&emsp;As a part of data cleaning process our team was able to clean upto 180 images including the robin dataset.
+    Our team was able to learn what are the diffculties in cleaning a dataset for training a GAN model.
+    Came to know about what are autoencoders and they are used in the development of GAN.
+  </p>
+</body>
 </html>
